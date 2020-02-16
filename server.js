@@ -1,10 +1,13 @@
 const express = require("express");
 // common js requires you import things as such - unless you use babble or something
-
+const connectDB = require("./config/db");
 const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => console.log("server started on port", PORT));
+
+// connect database
+connectDB();
 
 // routes!
 
