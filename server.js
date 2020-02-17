@@ -9,6 +9,9 @@ app.listen(PORT, () => console.log("server started on port", PORT));
 // connect database
 connectDB();
 
+// init Middleware - included in express
+app.use(express.json({ extended: false }));
+
 // routes!
 
 app.get("/", (req, res) =>
